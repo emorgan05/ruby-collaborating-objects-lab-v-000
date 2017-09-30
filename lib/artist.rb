@@ -10,6 +10,7 @@ class Artist
 
   def save
     @@all << self
+    self
   end
 
   def self.all
@@ -23,6 +24,7 @@ class Artist
     end
     if result == nil
       artist = self.new(name)
+      artist.save
     end
   end
 
