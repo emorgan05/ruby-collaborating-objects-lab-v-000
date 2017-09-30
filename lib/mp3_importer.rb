@@ -14,7 +14,6 @@ class MP3Importer
         @@mp3s << file
       end
     end
-    
   end
 
   def import
