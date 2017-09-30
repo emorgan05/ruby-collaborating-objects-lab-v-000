@@ -23,7 +23,6 @@ class Artist
     end
     if result == nil
       artist = self.new(name)
-      artist.save
     end
   end
 
