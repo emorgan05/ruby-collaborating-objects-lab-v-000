@@ -24,7 +24,6 @@ class Artist
     @@all.detect do |artist|
       result = artist if artist.name == name
     end
-    binding.pry
     if result == nil
       artist = self.new(name)
       artist.save
