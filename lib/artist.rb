@@ -23,10 +23,7 @@ class Artist
     result = @@all.detect do |artist|
       artist.name == name
     end
-    if result == nil
-      artist = self.new(name)
-      artist.save
-    end
+    result || self.new(name).save
   end
 
   def add_song(song)
