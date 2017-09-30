@@ -10,11 +10,11 @@ class Song
     array = filename.split(/\s\-\s/)
     song = self.new(array[1])
     song.artist_name = array[0]
-    song.artist.add_song(song)
     song
   end
 
   def artist_name=(name)
     self.artist = Artist.find_or_create_by_name(name)
+    self.artist.add_song(self)
   end
 end
