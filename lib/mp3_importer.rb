@@ -10,7 +10,7 @@ class MP3Importer
   def files
     file_array = Dir.entries(@path)
     file_array.select do |file|
-      if file.include?(/.mp3/)
+      if file =~ /.mp3/
         @@mp3s << file
       end
     end
