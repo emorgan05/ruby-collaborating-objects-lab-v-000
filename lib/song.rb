@@ -10,5 +10,10 @@ class Song
     array = file.split(/\s\-\s/)
     song = self.new(array[1])
     song.artist = array[0]
+    song
+  end
+
+  def artist_name
+    self.artist.name
   end
 end
