@@ -33,6 +33,6 @@ class Artist
   end
 
   def print_songs
-    puts self.songs
+    puts self.songs.name
   end
 end
