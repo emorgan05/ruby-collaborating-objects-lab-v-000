@@ -8,10 +8,6 @@ class Artist
     @songs = []
   end
 
-  def songs
-    @songs
-  end
-
   def save
     @@all << self
   end
@@ -24,6 +20,15 @@ class Artist
     end
   end
 
+  def add_song(name)
+    song = Song.new(name)
+    @songs << song
+  end
+  
+  def songs
+    @songs
+  end
+  
   def print_songs
     puts self.songs
   end
