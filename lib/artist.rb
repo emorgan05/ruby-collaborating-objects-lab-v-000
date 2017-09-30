@@ -24,11 +24,11 @@ class Artist
     song = Song.new(name)
     @songs << song
   end
-  
+
   def songs
     @songs
   end
-  
+
   def print_songs
     puts self.songs
   end
