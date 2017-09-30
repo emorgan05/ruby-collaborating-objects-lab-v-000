@@ -15,7 +15,7 @@ class Artist
   def all
     @@all
   end
-  
+
   def self.find_or_create_by_name(name)
     if @@all.include?(name)
       name
