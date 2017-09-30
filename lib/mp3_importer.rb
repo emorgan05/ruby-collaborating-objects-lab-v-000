@@ -2,7 +2,7 @@ class MP3Importer
   attr_accessor :path
 
   @@mp3s = []
-  
+
   def initialize(path)
     @path = path
   end
