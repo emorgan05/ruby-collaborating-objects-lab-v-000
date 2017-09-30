@@ -1,8 +1,6 @@
 class MP3Importer
   attr_accessor :path
 
-  @@mp3s = []
-
   def initialize(path)
     @path = path
   end
@@ -10,13 +8,11 @@ class MP3Importer
   def files
     file_array = Dir.entries(@path)
     file_array.select do |file|
-      if file =~ /.mp3/
-        @@mp3s << file
-      end
+      file =~ /.mp3/
     end
   end
 
   def import
-    Song.new_by_filename(@path)
+    Song.new_by_filename()
   end
 end
